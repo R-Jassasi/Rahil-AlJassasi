@@ -1,0 +1,189 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="./w3schools.css">
+    <link rel="stylesheet" href="./style2.css">
+    <script src="./index.js"></script>
+</head>
+
+
+
+<body>
+
+
+    <!-- Sticky bar on top -->
+    <div class="sticky-bar">
+        <div class="title">THE CUBE</div>
+        <a href="./index.html"><button class="close-btn2">&times;</button></a>
+    </div>
+
+
+    <!-- Header from - W3Schools CSS template -->
+    <header class="w3-display-container w3-content w3-wide" style="max-width:1600px;min-width:450px" id="home">
+        <img class="w3-image" src="./src/cube/header-cube.PNG" alt="The Cube" width="1600" height="800">
+        <div class="w3-display-bottomleft w3-padding-large w3-opacity">
+        </div>
+    </header>
+
+    <!-- First Grid -->
+    <div class="w3-row-padding w3-padding-64 w3-container">
+        <div class="w3-content">
+            <div class="w3-twothird">
+                <h1>THE CUBE</h1>
+                <h5 class="w3-padding-32">3D modeling and product filming</h5>
+
+                <p class="w3-text-grey">THE CUBE is a concept 3D design of a portable safe (fictional) that was modelled
+                    and rendered using Autodesk Maya, then 3D printed. A short promotional video was shot with my
+                    classmates to showcase how to use the safe.</p>
+            </div>
+
+            <div class="w3-third w3-center">
+
+
+                <!-- Hovering image change -->
+                <div class="image-container" data-hover-src="./src/cube/face.jpg">
+                    <img src="./src/cube/joker face.PNG" alt="Original Image" class="w3-image" width="300"
+                        height="auto">
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <hr>
+    <!-- First Grid -->
+    <div class="w3-container w3-padding-32 w3-center">
+        <h3>The Cube Renders</h3>
+
+        <img src="./src/cube/front_better.jpg" alt="Closed Cube" class="w3-image" style="display:block;margin:auto"
+            width="800" height="533">
+
+        <br>
+
+        <div class="w3-padding-32">
+            <img src="./src/cube/opened.jpg" alt="Opened Cube" class="w3-image" style="display:block;margin:auto"
+                width="800" height="533">
+        </div>
+
+        <div class="w3-padding-32">
+            <img src="./src/cube/messed.jpg" alt="Messed Cube" class="w3-image" style="display:block;margin:auto"
+                width="800" height="533">
+        </div>
+    </div>
+
+
+    <hr>
+    <!-- Second Grid -->
+    <div class="w3-row-padding  w3-padding-64 w3-container">
+        <div class="w3-content">
+            <div class="w3-twothird w3-center">
+                <img src="./src/cube/assemble.jpg" alt="The Cube" class="w3-padding-64" style="margin-left: -50px;"
+                    width="99%" height="auto">
+            </div>
+
+            <div class="w3-third">
+                <h1>Ideation Process</h1>
+                <h5 class="w3-padding-32">How the project came to life</h5>
+
+                <p class="w3-text-grey">
+                    While I was squeezing my brain for more than two days trying to get an idea for this project, I
+                    remember trying to solve my Rubik cube that I had unsolved for years. I thought about how hard it is
+                    to solve it until you understand the mathematical concept of it and practice a lot. I don’t know how
+                    exactly the idea came, but I thought, what if this hard puzzle is useful for something else… like a
+                    safe? A secret, mini one?
+                </p>
+            </div>
+        </div>
+    </div>
+
+      <!-- Modal for full size images on click-->
+      <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+        <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
+        <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+            <img id="img01" class="w3-image" style="background-color: white;">
+            <p id="caption"></p>
+        </div>
+    </div>
+
+    <div class="w3-container w3-padding-32 w3-center">
+        <h3>3D Printing The Cube</h3>
+
+        <img src="./src/cube/disassemble.jpg" alt="Disassembled printed Cube" class="w3-image" style="display:block;margin:auto"
+            width="800" height="533">
+
+        <br>
+
+        <div class="w3-padding-32">
+            <img src="./src/cube/assemble2.jpg" alt="Aassembled printed Cube" class="w3-image" style="display:block;margin:auto"
+                width="800" height="533">
+        </div>
+
+        <div class="w3-padding-32">
+            <!--image expand on click-->
+            <img src="./src/cube/storyboard-cube.jpg"  onclick="onClick(this)" alt="The Cube storyboards for fimling" class="w3-image zoom" style="display:block;margin:auto" width="800"
+                height="533">
+            <p>After modeling and printing The Cube, we created a script and storyboards to film a product explination
+                video for the printed cube. Then we shot the video in a small studio and recorded the narrative to put
+                everything together for the short video.</p>
+        </div>
+
+    </div>
+
+
+
+
+    <div class="class=w3-display-container w3-content w3-padding-32 w3-center"><iframe width="100%" height="500px"
+            src="https://www.youtube.com/embed/mb_a2h-_8E0?si=7MCcbVEXV2XZpGda" frameborder="1"
+            allowfullscreen></iframe>
+        <p class="w3-center">THE CUBE PRODUCT VIDEO</p>
+
+    </div>
+
+    <hr>
+
+
+</body>
+
+<footer>
+    <a href="./index.html">
+        <img class="logo-responsive" src="./src/Personal-Logo-white.png" alt="home">
+    </a>
+    <div class="gradient-change"></div>
+
+    <!-- all this to the right -->
+
+    <div class="icons">
+        <div class="tooltip"><a href="mailto: rahil.aljassasi@outlook.com" target="_blank">
+                <img class="item icon" src="./src/envelope_email_icon.png"></a>
+            <span class="tooltiptext">Email me</span>
+        </div>
+
+        <div class="tooltip"><a href="https://www.instagram.com/rvx_gallery/" target="_blank">
+                <img class="item icon" src="./src/instagram_fill_icon.png"></a>
+            <span class="tooltiptext">Follow me</span>
+        </div>
+
+        <div class="tooltip"><a href="https://www.linkedin.com/in/rahil-al-jassasi-2771b6254/" target="_blank">
+                <img class="item icon" src="./src/linkedin_icon.png"></a>
+            <span class="tooltiptext">Let's connect!</span>
+        </div>
+
+        <div class="tooltip"><a href="https://github.com/R-Jassasi" target="_blank">
+                <img class="item icon" src="./src/github_icon.png"></a>
+            <span class="tooltiptext">Repositories</span>
+        </div>
+
+
+        <span style="margin-right: 10px;"></span>
+        <div class="item font" id="clock"></div> <!-- Container to display the time -->
+    </div>
+
+</footer>
+
+</html>

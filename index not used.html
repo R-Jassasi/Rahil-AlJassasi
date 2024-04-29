@@ -1,0 +1,100 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="./style.css">
+  <script src="./index.js"></script>
+</head>
+
+<header>
+  <nav class="font card sticky">
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Blog</a>
+    <a href="#">Portefolio</a>
+    <a href="#">Contact</a>
+    <div class="animation start-home"></div>
+  </nav>
+</header>
+
+
+
+<body>
+  <div style="background-color: #040F1E; height: 100px;"> </div>
+  <div style="background-color: #BBD686; height: 100px;"> </div>
+  <div style="background-color: #BFDBF7; height: 100px;"> </div>
+  <div style="background-color: #9E6240; height: 100px;"> </div>
+  <div style="background-color: #EAB3FA; height: 100px;"> </div>
+
+  <a href="home.html"><h1>Hey, this is Rey!</h1></a>
+  <h1 class="font-bold"><a class="highlight" href="./about.html">ABOUT</a></h1>
+
+
+  <textarea id="textExample" rows="5" cols="60">Hi, this is Rey. This is a blank portfolio just to show that I'm using GitHub to host my website that I'll code later. Also, this animated text is a code snippet to test that JS works :) 
+  </textarea>
+
+  <button onclick="animateText(textExample)">Run the animated typing!</button>
+
+  <script>
+    function animateText(textArea) {
+      let text = textArea.value;
+      let to = text.length,
+        from = 0;
+
+      animate({
+        duration: 5000,
+        timing: bounce,
+        draw: function (progress) {
+          let result = (to - from) * progress + from;
+          textArea.value = text.slice(0, Math.ceil(result))
+        }
+      });
+    }
+
+
+    function bounce(timeFraction) {
+      for (let a = 0, b = 1; 1; a += b, b /= 2) {
+        if (timeFraction >= (7 - 4 * a) / 11) {
+          return -Math.pow((11 - 6 * a - 11 * timeFraction) / 4, 2) + Math.pow(b, 2)
+        }
+      }
+    }
+  </script>
+
+  <hr class="solid">
+
+  <h2><a class="highlight" href="https://rahil-aljassasi.myportfolio.com/">This is a link to my old portfolio to give an
+      idea of the content I'll include later</a></h2>
+
+
+  <!-- horizontal slider from ChatGPT -->
+  <div class="carousel-container">
+    <div class="carousel">
+      <a href="./page1.html">
+        <div class="carousel-item">Item 1<img src="./src/messed.jpg" alt="logo draft" width="100%"></div>
+      </a>
+      <div class="carousel-item">Item 2</div>
+      <div class="carousel-item">Item 3</div>
+      <div class="carousel-item">Item 4</div>
+      <div class="carousel-item">Item 5</div>
+      <div class="carousel-item">Item 6</div>
+      <!-- Add more items as needed -->
+    </div>
+  </div>
+
+
+  <h3>Here is a draft logo that would probably change completely later hehe</h3>
+  <img src="./src/logo-draft.PNG" alt="logo draft" width="500">
+  <p>The logo is a concept of my name in Arabic in case you were wondering. And yeah, I know it looks like a QR code lol
+  </p>
+
+  <div class="image-container"><img src="./src/logo-concept.jpg" alt="logo draft"></div>
+
+  <hr class="solid">
+
+  <h3>Here is a self portrait I made that is still VERY unfinished :)</h3>
+  <img src="./src/self-portrait-unfinished.jpeg" alt="logo draft" width="500">
+</body>
+
+</html>

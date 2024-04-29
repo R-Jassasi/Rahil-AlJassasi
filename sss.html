@@ -1,0 +1,148 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="./w3schools.css">
+    <link rel="stylesheet" href="./style2.css">
+    <script src="./index.js"></script>
+</head>
+
+
+
+<body>
+
+
+    <!-- Sticky bar on top -->
+    <div class="sticky-bar">
+        <div class="title">Stray Socks Society</div>
+        <a href="./index.html"><button class="close-btn2">&times;</button></a>
+    </div>
+
+
+    <!-- Header from - W3Schools CSS template -->
+    <header class="w3-display-container w3-content w3-wide" style="max-width:1400px;min-width:400px" id="home">
+        <img class="w3-image" src="./src/sss/sss.jpg" alt="SSS" width="1600" height="800">
+        <div class="w3-display-bottomleft w3-padding-large w3-opacity">
+        </div>
+    </header>
+
+    <!-- First Grid -->
+    <div class="w3-row-padding w3-padding-64 w3-container">
+        <div class="w3-content">
+            <div class="w3-twothird">
+                <h1>STRAY SOCKS SOCIETY</h1>
+                <h5 class="w3-padding-32">Branding, webiste and poster design for a laundrette</h5>
+
+                <p class="w3-text-grey">This one was designed for a laundrette small business that contains a cafe
+                    and a music stage. The owners requested branding and a website that has a hipster, youthful theme.
+                    The place was meant to be a community for young people mostly to socialise, hence the name STRAY
+                    SOCKS SOCIETY (SSS).</p>
+
+                    <a href="https://r-jassasi.github.io/Stray-Socks-Society/" target="_blank">Website Live Preview</a>
+            </div>
+
+            <div class="w3-third w3-center">
+                <img src="./src/sss/sss-logo-small.jpg" alt="SSS Logo" class="w3-padding-64 w3-margin-right"
+                    width="300px">
+            </div>
+        </div>
+    </div>
+
+
+
+    <hr>
+
+
+
+
+    <div class="w3-container w3-padding-32 w3-center">
+        <h3 class="font-bold">Logo Design</h3>
+            <img src="./src/sss/sss-logo.jpg" alt="SSS Logo" class="w3-image"
+                style="display:block;margin:auto" width="500" height="533">
+                <br>
+
+            <img src="./src/sss/sss-logo-small.jpg" alt="SSS Logo" class="w3-image"
+                style="display:block;margin:auto" width="500" height="533">
+
+
+
+    </div>
+
+    <hr>
+
+
+
+    <!-- Modal for full size images on click-->
+    <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+        <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
+        <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+            <img id="img01" class="w3-image" style="background-color: white;">
+            <p id="caption"></p>
+        </div>
+    </div>
+
+    <!-- image expand on click-->
+    <div class="w3-container w3-padding-32 w3-center">
+        <h3>Menu Design</h3>
+        <img src="./src/sss/menu-sss.jpg" style="display:block;margin:auto; " class="w3-image zoom" width="800" height="533"
+            onclick="onClick(this)" alt="Menu Design for SSS">
+
+
+
+        <div class="w3-padding-32">
+            <h3>Music Posters Design</h3>
+            <img src="./src/sss/poster1.jpg" style="display:block;margin:auto" class="w3-image zoom" width="800" height="533"
+                onclick="onClick(this)" alt="Music Open Mic Poster Design">
+        </div>
+
+        <div class="w3-padding-32">
+            <img src="./src/sss/poster2.jpg" style="display:block;margin:auto" class="w3-image zoom" width="800" height="533"
+                onclick="onClick(this)" alt="Music Live Performance Poster Design">
+        </div>
+    </div>
+
+    <hr>
+
+
+</body>
+
+<footer>
+    <a href="./index.html">
+        <img class="logo-responsive" src="./src/Personal-Logo-white.png" alt="home">
+    </a>
+    <div class="gradient-change"></div>
+
+    <!-- all this to the right -->
+
+    <div class="icons">
+        <div class="tooltip"><a href="mailto: rahil.aljassasi@outlook.com" target="_blank">
+                <img class="item icon" src="./src/envelope_email_icon.png"></a>
+            <span class="tooltiptext">Email me</span>
+        </div>
+
+        <div class="tooltip"><a href="https://www.instagram.com/rvx_gallery/" target="_blank">
+                <img class="item icon" src="./src/instagram_fill_icon.png"></a>
+            <span class="tooltiptext">Follow me</span>
+        </div>
+
+        <div class="tooltip"><a href="https://www.linkedin.com/in/rahil-al-jassasi-2771b6254/" target="_blank">
+                <img class="item icon" src="./src/linkedin_icon.png"></a>
+            <span class="tooltiptext">Let's connect!</span>
+        </div>
+
+        <div class="tooltip"><a href="https://github.com/R-Jassasi" target="_blank">
+                <img class="item icon" src="./src/github_icon.png"></a>
+            <span class="tooltiptext">Repositories</span>
+        </div>
+
+
+        <span style="margin-right: 10px;"></span>
+        <div class="item font" id="clock"></div> <!-- Container to display the time -->
+    </div>
+
+</footer>
+
+</html>

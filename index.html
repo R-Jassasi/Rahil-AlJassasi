@@ -1,0 +1,341 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <!-- Google tag (gtag.js) -->
+ <script async src="https://www.googletagmanager.com/gtag/js?id=G-7SGX7H3Y60"></script>
+ <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-7SGX7H3Y60');
+ </script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" type="image/x-icon" href="./src/Personal-Logo-white.png" />
+    <link rel="stylesheet" href="./style2.css">
+    <link rel="stylesheet" href="./contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="./index.js"></script>
+    
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init({
+                publicKey: "nTb2BgELxuw0P8xEv",
+            });
+        })();
+    </script>
+</head>
+
+<body>
+    <!-- Widget -->
+    <div class="widget">
+        <div class="widget-header">
+            <h2 class="font-bold">Weather Forcast</h2>
+        </div>
+        <div class="widget-body">
+            <div class="weather-icon">
+                <iframe src="https://giphy.com/embed/KDtyKqAC8ySR3zehxc" width="100" height="100" frameBorder="0"
+                    class="giphy-embed" allowFullScreen></iframe>
+                <p style="font-size: x-small;"><a
+                        href="https://giphy.com/stickers/coffee-cup-mug-KDtyKqAC8ySR3zehxc">via GIPHY</a></p>
+            </div>
+            <div class="weather-details">
+                <p class="temperature">80°C</p>
+                <p class="description">100% coffee pour</p>
+                <p class="location">📍 Rey's Desk</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- BG IMAGE -->
+    <div class="background-image"></div>
+
+    <!-- ABOUT -->
+
+    <!-- First popup trigger -->
+    <a href="#" class="popup-trigger" data-target="popup-modal-1">
+        <div onclick="animateText(textExample)" class="icons-text font"><img src="./src/user-white.png" alt="Icon">
+            <span>ABOUT</span>
+        </div>
+    </a>
+
+    <!-- First popup modal -->
+    <div id="popup-modal-1" class="popup-modal">
+        <div class="popup-content">
+            <button class="close-btn">&times;</button>
+            <h2 class="popup-title">ABOUT</h2>
+            <div class="scrollable-content">
+
+                <textarea id="textExample" rows="6" cols="60">Hey, this is Rey (Rahil)! A keen eye for details! It started with playing with cameras, writing stories and making lots of PowerPoints as a kid :D Then evolved into developing websites, audio-visual designs, and even 3D worlds. Much of my inspiration comes from my long walks and talks with people! 💻📸🎞️🎮🎨☕️🌼🌳🐱🧠✨
+                </textarea>
+                <button class="button" onclick="animateText(textExample)">RUN THE TYPING!</button>
+
+                <script>
+                    function animateText(textArea) {
+                        let text = textArea.value;
+                        let to = text.length,
+                            from = 0;
+
+                        animate({
+                            duration: 3000,
+                            timing: bounce,
+                            draw: function (progress) {
+                                let result = (to - from) * progress + from;
+                                textArea.value = text.slice(0, Math.ceil(result))
+                            }
+                        });
+                    }
+
+
+                    function bounce(timeFraction) {
+                        for (let a = 0, b = 1; 1; a += b, b /= 2) {
+                            if (timeFraction >= (7 - 4 * a) / 11) {
+                                return -Math.pow((11 - 6 * a - 11 * timeFraction) / 4, 2) + Math.pow(b, 2)
+                            }
+                        }
+                    }
+                </script>
+
+                <div style="margin-bottom: 20px;"></div>
+
+                <!-- Hovering image change -->
+                <div style="text-align: center;">
+                    <h4>Experienced in graphic design, creative coding, and web development. Passionate about crafting
+                        3D
+                        experiences and diving into the world of games. I thrive on creativity, weaving tales through
+                        various mediums and always seeking fresh ways to express myself. Let's create wonderful things
+                        together!</h4>
+
+                    <h1>↓↓↓</h1>
+                    <h2>Hover Me!</h2>
+                </div>
+
+                <div class="image-container" data-hover-src="./src/Raheel.jpg"
+                    style="width: 80%; margin-left: auto; margin-right: auto;">
+                    <img src="./src/self-portrait-unfinished.jpeg" alt="Original Image" class="w3-image" width="800px"
+                        height="auto">
+                </div>
+
+                <!-- <div class="logo-container"> <img style="width: 150px; margin-top: -80px;"
+                        src="./src/Personal-Logo-black-sharp.png" alt="home">
+                </div> -->
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <!-- PROJECTS -->
+
+    <!-- Second popup trigger -->
+    <a href="#" class="popup-trigger" data-target="popup-modal-2">
+        <div class="icons-text font" style="top: 180px;"><img src="./src/folder-white.png" alt="Icon">
+            <span>PROJECTS</span>
+        </div>
+    </a>
+
+
+    <!-- Second popup modal -->
+    <div id="popup-modal-2" class="popup-modal">
+        <div class="popup-content">
+            <button class="close-btn">&times;</button>
+            <h2 class="popup-title">PROJECTS</h2>
+            <div class="scrollable-content">
+                <div class="wrapper">
+
+                    <div class="icons-text-window font"><a href="./pianomapping.html"><img src="./src/piano/piano-pic.jpg" alt="Icon">
+                            <span>Piano Mapping III</span></a>
+                    </div>
+
+                    <div class="icons-text-window font"><a href="./cafinto.html"><img
+                                src="./src/cafinto/CAFINTO-LOGO-SYMBOL.jpg" alt="Icon">
+                            <span>CAFINTO</span></a>
+                    </div>
+
+                    <div class="icons-text-window font"><a href="./dreamlight.html"><img
+                                src="./src/dreamlight/CPC_Threejs.jpg" alt="Icon">
+                            <span>DreamLight Three.js</span></a>
+                    </div>
+
+                    <div class="icons-text-window font"><a href="./academeal.html"><img
+                                src="./src/academeal/Academeal-Logo-crop.png" alt="Icon">
+                            <span>Academeal App</span></a>
+                    </div>
+
+                    <div class="icons-text-window font"><a href="./p5js.html"><img src="./src/p5js/Antony_I.png"
+                                alt="Icon">
+                            <span>P5.js Paintings</span></a>
+                    </div>
+
+                    <div class="icons-text-window font"><a href="./nutrientsmentalhealth.html"><img
+                                src="./src/nutrients/cover-cropped.jpg" alt="Icon">
+                            <span style="font-size: medium;">Nutrients VS Mental Health</span></a>
+                    </div>
+
+                    <div class="icons-text-window font"><a href="./thecube.html"><img src="./src/cube/front_cropped.jpg"
+                                alt="Icon">
+                            <span>THE CUBE</span></a>
+                    </div>
+
+                    <div class="icons-text-window font"><a href="./inmyhead.html"><img src="./src/inmyhead/inmyhead.png"
+                                alt="Icon">
+                            <span>In My Head</span></a>
+                    </div>
+
+                    <div class="icons-text-window font"><a href=""><img src="./src/ggj/GlobalGameJamLogo.jpg"
+                                alt="Icon">
+                            <span>Global Game Jam</span></a>
+                    </div>
+
+                    <div class="icons-text-window font"><a href="./sss.html"><img src="./src/sss/sss-logo.jpg"
+                                alt="Icon">
+                            <span>SSS</span></a>
+                    </div>
+
+                    <div class="icons-text-window font"><a href="./oho.html"><img src="./src/oho/OHO-logo-cropped.jpg"
+                                alt="Icon">
+                            <span>OHO Bikes</span></a>
+                    </div>
+
+                    <div class="icons-text-window font"><a href="./firstcodedweb.html"><img
+                                src="./src/firstcodedweb/DILATATIONAL_2.png" alt="Icon">
+                            <span>My 1st Coded Web</span></a>
+                    </div>
+
+                    <!-- <div class="icons-text-window font"><a href=""><img src="./src/logo-draft.PNG" alt="Icon">
+                            <span>Interaction Design?</span></a>
+                    </div>
+
+                    <div class="icons-text-window font"><a href=""><img src="./src/logo-draft.PNG" alt="Icon">
+                            <span>ARCHIVES?</span></a>
+                    </div>
+
+                    <div class="icons-text-window font"><a href=""><img src="./src/logo-draft.PNG" alt="Icon">
+                            <span>ONEIROS?</span></a>
+                    </div>
+
+                    <div class="icons-text-window font"><a href=""><img src="./src/logo-draft.PNG" alt="Icon">
+                            <span>sketches?</span></a>
+                    </div>
+
+                    <div class="icons-text-window font"><a href=""><img src="./src/logo-draft.PNG" alt="Icon">
+                            <span>Desert Game - coming soon</span></a>
+                    </div> -->
+
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- CONTACT -->
+
+    <!-- Third popup trigger -->
+    <a href="#" class="popup-trigger" data-target="popup-modal-3">
+        <div class="icons-text font" style="top: 360px;"><img src="./src/connect-white.png" alt="Icon">
+            <span>CONTACT</span>
+        </div>
+    </a>
+
+
+    <!-- Third popup modal -->
+    <div id="popup-modal-3" class="popup-modal">
+        <div class="popup-content">
+            <button class="close-btn">&times;</button>
+            <h2 class="popup-title">CONTACT</h2>
+            <div class="scrollable-content">
+                <div id="wrapper">
+                    <h2 class="font-bold">Got something to say? I'm all ears :) <br> Drop me a message!</h2>
+                    <form id="form" class="topBefore">
+                        <!-- form by Matheus Marsiglio https://codepen.io/matmarsiglio/pen/pojoPR-->
+                        <div class="font" id="warning-message" style="margin-bottom: 16px;"></div>
+                        <input id="name" type="text" placeholder="Enter Name" required>
+                        <input id="email" type="email" placeholder="Enter Email" required>
+                        <textarea id="message" placeholder="Enter Message" required></textarea>
+                        <button id="submit" type="button" onclick="sendMail()">Submit</button>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CV -->
+
+    <!-- Forth popup trigger -->
+    <a href="#" class="popup-trigger" data-target="popup-modal-4">
+        <div class="icons-text font" style="top: 540px;"><img src="./src/paper-white.png" alt="Icon">
+            <span>CV</span>
+        </div>
+    </a>
+
+
+    <!-- Forth popup modal -->
+    <div id="popup-modal-4" class="popup-modal">
+        <div class="popup-content">
+            <button class="close-btn">&times;</button>
+            <h2 class="popup-title">CV</h2>
+            <div class="scrollable-content">
+                <img class="cv" src="./src/CV.jpg" alt="home">
+                <a href="./src/RAHIL-CV.pdf" download="RahilCV.pdf"><button class="button">DOWNLOAD CV</button></a>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+</body>
+
+<footer>
+    <a href="./index.html">
+        <img class="logo-responsive" src="./src/Personal-Logo-white.png" alt="home">
+    </a>
+    <div class="gradient-change"></div>
+
+    <!-- all this to the right -->
+
+    <div class="icons">
+        <div class="tooltip"><a href="mailto: rahil.aljassasi@outlook.com" target="_blank">
+                <img class="item icon" src="./src/envelope_email_icon.png"></a>
+            <span class="tooltiptext">Email me</span>
+        </div>
+
+        <div class="tooltip"><a href="https://www.instagram.com/rvx_gallery/" target="_blank">
+                <img class="item icon" src="./src/instagram_fill_icon.png"></a>
+            <span class="tooltiptext">Follow me</span>
+        </div>
+
+        <div class="tooltip"><a href="https://www.linkedin.com/in/rahil-al-jassasi-2771b6254/" target="_blank">
+                <img class="item icon" src="./src/linkedin_icon.png"></a>
+            <span class="tooltiptext">Let's connect!</span>
+        </div>
+
+        <div class="tooltip"><a href="https://github.com/R-Jassasi" target="_blank">
+                <img class="item icon" src="./src/github_icon.png"></a>
+            <span class="tooltiptext">Repositories</span>
+        </div>
+
+
+        <span style="margin-right: 10px;"></span>
+        <div class="tooltip">
+            <div class="item font" id="clock"></div> <!-- Container to display the time -->
+            <span class="tooltiptext">coffee o'clock?</span>
+
+        </div>
+    </div>
+
+</footer>
+
+</html>
