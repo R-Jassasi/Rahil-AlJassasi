@@ -45,6 +45,10 @@ input,
 
 }
 
+p{
+    font-size: 1.08rem;
+}
+
 a:hover {
     color: rgb(71, 134, 74);
 }
