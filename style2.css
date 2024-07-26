@@ -97,7 +97,11 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('./src/Raheel.jpg');
+
+    background: radial-gradient(77.73% 77.73% at 98.52% 96.25%, #F98BDA 0%, rgba(128, 76, 239, 0.29) 50.52%, rgba(91, 216, 216, 0) 100%), radial-gradient(141.73% 105.23% at 50% -7.16%, #E1F8FF 0%, rgba(160, 198, 255, 0) 50.73%, rgba(162, 147, 255, 0) 100%), radial-gradient(112.27% 48.54% at 1.59% 50%, rgba(255, 130, 227, 0.5) 0%, rgba(255, 123, 234, 0.095) 53.91%, rgba(254, 216, 255, 0) 100%), linear-gradient(153.07deg, #8177F3 6.37%, rgba(255, 230, 166, 0) 83.82%);
+    background-blend-mode: normal, normal, normal, normal, normal, normal;
+    filter: blur(50px);
+    /* background-image: url('./src/Raheel.jpg'); */
     /* Specify the path to your image */
     background-size: cover;
     /* Cover the entire viewport */
@@ -105,10 +109,10 @@ body {
     /* Center the image */
     z-index: -1;
     /* Send the background image behind other content */
+
 }
 
-/*chatGPT*/
-.background-image::before {
+/* .background-image::before {
     content: "";
     position: absolute;
     top: 0;
@@ -116,9 +120,9 @@ body {
     width: 100%;
     height: 100%;
     background: linear-gradient(to left, rgba(0, 0, 0, 0.671), rgba(0, 0, 0, 0));
-    /* Adjust the gradient colors and opacity as needed */
+    /* Adjust the gradient colors and opacity as needed 
     z-index: 0;
-}
+} */
 
 
 .button {
@@ -127,7 +131,7 @@ body {
     font-size: 16px;
     font-weight: bold;
     color: black;
-    background-color: rgb(174, 255, 178);
+    background-color: rgba(110, 230, 160, 0.63);
     cursor: pointer;
     border: solid 1px black;
 }
@@ -146,9 +150,9 @@ body {
     text-align: center;
     position: fixed;
     padding: 10px;
-    right: 20px;
+    right: 90px;
     /* Adjust the distance from the right edge */
-    top: 20px;
+    top: 50px;
     /* Adjust the distance from the top edge */
     width: 100px;
     /* Adjust the width as needed */
@@ -169,7 +173,7 @@ body {
 }
 
 .icons-text:hover {
-    background-color: rgba(115, 221, 177, 0.445);
+    background-color: rgba(128, 76, 239, 0.29);
 }
 
 .icons-text-window:hover {
@@ -416,32 +420,34 @@ body {
 footer {
     display: flex;
     align-items: center;
-    /* Align items vertically in the center */
-    background-color: #333;
+
+    backdrop-filter: blur(4px) saturate(200%);
+    -webkit-backdrop-filter: blur(4px) saturate(200%);
+    background-color: rgba(0, 0, 0, 0.603);
+    border: 1px solid rgba(206, 206, 206, 0.247);
+
     color: #fff;
     padding: 10px 30px !important;
     position: fixed !important;
-    ;
+    
     left: 0;
     bottom: 0 !important;
-    ;
+    
     width: 100%;
-    height: 40px !important;
-    ;
+    height: 60px !important;
+    box-sizing: border-box;
+
 }
 
 footer .item {
     display: flex;
-    /* Use flexbox layout for items */
     align-items: center;
-    /* Align items vertically in the center */
 
 
 }
 
 footer .icons {
     display: flex;
-    /* Use flexbox layout for items */
     position: fixed;
     right: 20px;
 
@@ -451,7 +457,6 @@ footer .icon {
     width: 30px !important;
     height: 30px;
     padding: 0 10px;
-    /* Adjust padding as needed */
 
 }
 
@@ -459,58 +464,86 @@ footer .icon {
 
 .logo-container {
     position: relative;
-    width: 120px; /* Adjust the width of the logo */
-    height: 120px; /* Adjust the height of the logo */
-  }
-  
+    width: 120px;
+    /* Adjust the width of the logo */
+    height: 120px;
+    /* Adjust the height of the logo */
+}
+
 .logo-container::before {
     content: '';
     position: absolute;
-    top: -60px;
+    top: -50px;
     left: 10px;
     width: 100%;
     height: 100%;
-    background-size: cover; /* Ensure the background image covers the container */
-    background-position: center; /* Center the background image */
-    z-index: -1; /* Ensure the background image stays behind the logo */
-    animation: changeBackground 10s infinite; /* Adjust the duration as needed */
-}
-  
-@keyframes changeBackground {
-    0% { background-image: url('https://images.unsplash.com/photo-1481819613568-3701cbc70156?q=80&w=2016&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); } /* Start with the first image */
-    25% { background-image: url('./src/cube/front_better.jpg'); } /* Switch to the second image */
-    50% { background-image: url('./src/firstcodedweb/BILATERAL.png'); } /* Switch to the third image */
-    75% { background-image: url('./src/firstcodedweb/AXIAL.png'); } /* Switch to the fourth image */
-    100% { background-image: url('https://images.unsplash.com/photo-1481819613568-3701cbc70156?q=80&w=2016&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); } /* Switch back to the first image */
+    background-size: cover;
+    /* Ensure the background image covers the container */
+    background-position: center;
+    /* Center the background image */
+    z-index: -1;
+    /* Ensure the background image stays behind the logo */
+    animation: changeBackground 10s infinite;
+    /* Adjust the duration as needed */
 }
 
-.gradient-change{
+@keyframes changeBackground {
+    0% {
+        background-image: url('https://images.unsplash.com/photo-1481819613568-3701cbc70156?q=80&w=2016&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    }
+
+    /* Start with the first image */
+    25% {
+        background-image: url('./src/cube/front_better.jpg');
+    }
+
+    /* Switch to the second image */
+    50% {
+        background-image: url('./src/firstcodedweb/BILATERAL.png');
+    }
+
+    /* Switch to the third image */
+    75% {
+        background-image: url('./src/firstcodedweb/AXIAL.png');
+    }
+
+    /* Switch to the fourth image */
+    100% {
+        background-image: url('https://images.unsplash.com/photo-1481819613568-3701cbc70156?q=80&w=2016&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    }
+
+    /* Switch back to the first image */
+}
+
+.gradient-change {
     position: relative;
-    width: 120px; 
+    width: 120px;
     height: 120px;
-    top: -40px;
+    top: -50px;
     left: -135px;
     background-color: black;
     background: linear-gradient(-90deg, #FEE148, #9AB796, #7bb3a0, #899BFD, #c3a6ee, #faa1e4);
-	background-size: 300% 300%;
+    background-size: 300% 300%;
     z-index: -1;
-	animation: change 10s linear infinite;
+    animation: change 10s linear infinite;
 }
 
 
 /* https://www.youtube.com/watch?v=woVuUbDOeMk&ab_channel=Codegrid */
 @keyframes change {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
-  
+
 
 /*________weather widget ChatGPT ______________*/
 .widget {
@@ -529,7 +562,7 @@ footer .icon {
 }
 
 .widget-header {
-    background-color: #82f47352;
+    background-color: #a4aaf3b2;
     color: rgb(53, 53, 53);
     padding: 10px;
     border-bottom: 1px solid #999;
@@ -582,12 +615,12 @@ footer .icon {
     /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 }
 
-.logo-responsive{
+.logo-responsive {
     width: 150px;
-    margin-top: -80px;
+    margin-top: -100px;
 }
 
-.cv{
+.cv {
     width: 1000px;
 }
 
@@ -597,7 +630,7 @@ footer .icon {
 
 /* Adjust sizes and positions for tablet view */
 @media screen and (max-width: 768px) {
-    .cv{
+    .cv {
         width: 100%;
         height: auto;
     }
@@ -625,29 +658,31 @@ footer .icon {
 
 /* Adjust sizes and positions for phone view */
 @media screen and (max-width: 480px) {
-    iframe{
+    iframe {
         width: 90%;
         height: 400px;
     }
 
-    .cv{
+    .cv {
         width: 100%;
         height: auto;
     }
 
-    
+
 
     .logo-responsive {
         width: 100px;
         margin-right: 20px;
     }
-    .gradient-change{
+
+    .gradient-change {
         width: 80px;
         height: 80px;
+        top: -45px;
         margin-left: 25px;
     }
 
-    #clock{
+    #clock {
         display: none;
     }
 
